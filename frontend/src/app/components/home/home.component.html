@@ -1,13 +1,25 @@
 <div class="chat-container">
-    <div class="chat-messages">
-      <div *ngFor="let message of messages" [ngClass]="message.role">
-        {{ message.text }}
-      </div>
+  <div class="chat-messages">
+    <div *ngFor="let message of messages" [ngClass]="message.role">
+      {{ message.text }}
     </div>
-  
-    <form (ngSubmit)="sendMessage()" class="chat-input">
-      <input [(ngModel)]="userInput" name="userInput" placeholder="Ask something..." required />
-      <button type="submit">Send</button>
-    </form>
+    <!-- New: Display loading indicator while processing -->
+    <div *ngIf="isLoading" class="bot loading">
+      ...Processing image...
+    </div>
   </div>
-  
+
+  <form (ngSubmit)="sendMessage()" class="chat-input">
+    <!-- New: Hidden file input -->
+    <input type="file" id="file-upload" (change)="onFileSelected($event)" accept="image/*" style="display: none" />
+    
+    <!-- New: Label that acts as the "+" button -->
+    <label for="file-upload" class="upload-button" style="background-color: aqua; width: 30px; size: 5px;" title="upload diseased image">+</label>
+    <button style="background: none; border: none; cursor: pointer;font-size: 28px" title="voice search coming soon">
+    🎤
+  </button>
+    
+    <input [(ngModel)]="userInput" name="userInput" placeholder="Ask something..." required />
+    <button type="submit">Send</button>
+  </form>
+</div>

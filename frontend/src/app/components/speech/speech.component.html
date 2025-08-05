@@ -1,0 +1,11 @@
+<div class="p-4">
+  <h2 class="text-xl font-bold mb-2">🎙️ Ask by Speaking (Telugu or English)</h2>
+
+  <button (click)="startRecording()" [disabled]="isRecording" class="btn btn-success mr-2">Start Recording</button>
+  <button (click)="stopRecording()" [disabled]="!isRecording" class="btn btn-danger">Stop Recording</button>
+
+  <div class="mt-4">
+    <p><strong>Transcribed Text:</strong> {{ transcribedText }}</p>
+    <p><strong>Response:</strong> {{ responseText }}</p>
+  </div>
+</div>
