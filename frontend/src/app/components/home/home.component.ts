@@ -16,7 +16,7 @@ export class HomeComponent {
   isLoading: boolean = false; // New: Loading state for file upload
 
   // The base URL for the backend endpoints
-  private baseUrl = 'http://127.0.0.1:8021';
+  private baseUrl = 'https://agri-backend-m6p7.onrender.com';
 
   constructor(private http: HttpClient) {}
 
