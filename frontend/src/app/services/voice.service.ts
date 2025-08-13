@@ -28,7 +28,7 @@ export interface SupportedLanguage {
   providedIn: 'root'
 })
 export class VoiceService {
-  private baseUrl = 'https://agri-backend-m6p7.onrender.com';
+  private baseUrl = 'https://agri-backend-1.onrender.com';
 
   constructor(private http: HttpClient) { }
 
