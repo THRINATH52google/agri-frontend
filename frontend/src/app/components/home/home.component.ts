@@ -20,7 +20,7 @@ export class HomeComponent {
   audioChunks: any[] = [];
   autoStopTimeout: any = null;
   // The base URL for the backend endpoints
-  private baseUrl = 'https://agri-backend-m6p7.onrender.com';
+  private baseUrl = 'https://agri-backend-1.onrender.com';
 
   constructor(
     private http: HttpClient,
